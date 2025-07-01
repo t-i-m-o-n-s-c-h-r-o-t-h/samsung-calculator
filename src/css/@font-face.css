@@ -1,0 +1,61 @@
+/* 🔠 Import Font 'Venus Medium' */
+
+@font-face {
+    font-family: 'URWVenusW01';
+    src: url('./../fonts/venus-medium/URWVenusW01-Medium.woff2') format('woff2'),
+        url('./../fonts/venus-medium/URWVenusW01-Medium.woff') format('woff'),
+        url('./../fonts/venus-medium/URWVenusW01-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'URWVenusW01';
+    src: url('./../fonts/venus-medium/URWVenusW01-Medium_1.woff2') format('woff2'),
+        url('./../fonts/venus-medium/URWVenusW01-Medium_1.woff') format('woff'),
+        url('./../fonts/venus-medium/URWVenusW01-Medium_1.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'URWVenusW01';
+    src: url('./../fonts/venus-medium/URWVenusW01-Medium_2.woff2') format('woff2'),
+        url('./../fonts/venus-medium/URWVenusW01-Medium_2.woff') format('woff'),
+        url('./../fonts/venus-medium/URWVenusW01-Medium_2.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'URWVenusW01';
+    src: url('./../fonts/venus-medium/URWVenusW01-Medium_3.woff2') format('woff2'),
+        url('./../fonts/venus-medium/URWVenusW01-Medium_3.woff') format('woff'),
+        url('./../fonts/venus-medium/URWVenusW01-Medium_3.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'URWVenusW01';
+    src: url('./../fonts/venus-medium/URWVenusW01-Medium_4.woff2') format('woff2'),
+        url('./../fonts/venus-medium/URWVenusW01-Medium_4.woff') format('woff'),
+        url('./../fonts/venus-medium/URWVenusW01-Medium_4.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'URWVenusW01';
+    src: url('./../fonts/venus-medium/URWVenusW01-Medium_5.woff2') format('woff2'),
+        url('./../fonts/venus-medium/URWVenusW01-Medium_5.woff') format('woff'),
+        url('./../fonts/venus-medium/URWVenusW01-Medium_5.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}

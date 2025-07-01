@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- ⚒️ General -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samsung Calculator</title>
+
+    <!-- 📂 Import -->
+
+    <link rel="stylesheet" type="text/css" href="./src/css/@font-face.css">
+    <link rel="stylesheet" type="text/css" href="./src/import/google-material-icons.css">
+    <link rel="stylesheet" type="text/css" href="./src/css/style.css">
+    <script src="./src/js/app.js" type="text/javascript" defer></script>
+
+    <!-- 🖼️ Favicon -->
+
+    <link rel="icon" type="image/png" href="./src/img/favicons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./src/img/favicons/favicon.svg" />
+    <link rel="shortcut icon" href="./src/img/favicons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./src/img/favicons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Calculator" />
+    <link rel="manifest" href="./src/img/favicons/site.webmanifest" />
+
+</head>
+
+<body>
+
+
+    <!-- 🔢 Result Display -->
+
+    <header id="result">
+
+        <div class="command">
+
+        </div>
+
+        <div class="live-result">
+            <span></span>
+        </div>
+
+    </header>
+
+    <!-- ⏪ Command Bar -->
+
+    <section id="command-bar">
+
+        <button type="button" class="backspace gicon" onclick="backspace()">backspace</button>
+
+    </section>
+
+    <div class="seperator"></div>
+
+    <!-- ♾️ Button Grid -->
+
+    <section id="button-grid">
+
+        <div><button type="button" class="tertiary" onclick="enter_integer(1)">1</button></div>
+        <div><button type="button" class="tertiary" onclick="enter_integer(2)">2</button></div>
+        <div><button type="button" class="tertiary" onclick="enter_integer(3)">3</button></div>
+        <div><button type="button" class="secondary entity" onclick="set_operator('/')">&divide;</button></div>
+        <div><button type="button" class="tertiary" onclick="enter_integer(4)">4</button></div>
+        <div><button type="button" class="tertiary" onclick="enter_integer(5)">5</button></div>
+        <div><button type="button" class="tertiary" onclick="enter_integer(6)">6</button></div>
+        <div><button type="button" class="secondary entity" onclick="set_operator('*')">&times;</button></div>
+        <div><button type="button" class="tertiary" onclick="enter_integer(7)">7</button></div>
+        <div><button type="button" class="tertiary" onclick="enter_integer(8)">8</button></div>
+        <div><button type="button" class="tertiary" onclick="enter_integer(9)">9</button></div>
+        <div><button type="button" class="secondary entity" onclick="set_operator('-')">&minus;</button></div>
+        <div><button type="button" class="primary entity" onclick="calculate()">&#61;</button></div>
+        <div><button type="button" class="tertiary" onclick="enter_integer(0)">0</button></div>
+        <div><button type="button" class="secondary" onclick="reset()">C</button></div>
+        <div><button type="button" class="secondary entity" onclick="set_operator('+')">&plus;</button></div>
+
+    </section>
+
+
+</body>
+
+</html>

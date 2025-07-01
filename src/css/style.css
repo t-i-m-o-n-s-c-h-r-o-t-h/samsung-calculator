@@ -1,0 +1,416 @@
+/* ⚒️ General */
+
+:root {
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    --clr-background: #000001;
+    --clr-font: #eaeaea;
+    --clr-font-secondary: #575658;
+    --clr-surface-weak: #161619;
+    --clr-surface-weak-hover: #111113;
+    --clr-surface-medium: #2d2d2f;
+    --clr-surface-strong: #909091;
+    --clr-primary: #18c400;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: var(--clr-background);
+    color: var(--clr-font);
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "URWVenusW01", Helvetica, sans-serif;
+}
+
+/* 🔢 Result Display */
+
+#result {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
+}
+
+#result>.command {
+    width: 100%;
+    height: 122px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: .05rem;
+    padding-top: 4.5rem;
+    padding-right: 1.75rem;
+}
+
+#result>.command>span {
+    font-size: 2.75rem;
+}
+
+#result>.command>.sys {
+    color: var(--clr-primary);
+    font-size: 2.5rem;
+}
+
+#result>.live-result {
+    width: 100%;
+    height: 79px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 2.25rem;
+    padding-top: 3rem;
+}
+
+#result>.live-result>span {
+    font-size: 1.75rem;
+    color: var(--clr-font-secondary);
+}
+
+/* ⏪ Command Bar */
+
+#command-bar {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 1.75rem;
+    padding-top: 2rem;
+}
+
+#command-bar>button {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+}
+
+#command-bar>button.backspace {
+    color: var(--clr-primary);
+}
+
+.seperator {
+    width: 75%;
+    height: 2.5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    background-color: var(--clr-surface-weak);
+}
+
+/* ♾️ Button Grid */
+
+#button-grid {
+    width: 100%;
+    height: auto;
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#button-grid>div {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#button-grid>div>button {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--clr-surface-weak);
+    color: var(--clr-font);
+    font-size: 1.5rem;
+    margin-top: .25rem;
+    margin-bottom: .25rem;
+    transition: .5s;
+}
+
+#button-grid>div>button:hover {
+    background-color: var(--clr-surface-weak-hover);
+}
+
+#button-grid>div>button.primary {
+    background-color: var(--clr-primary);
+    font-weight: 700;
+}
+
+#button-grid>div>button.secondary {
+    background-color: var(--clr-surface-medium);
+    font-weight: 700;
+}
+
+#button-grid>div>button.secondary:hover {
+    background-color: var(--clr-surface-strong);
+}
+
+#button-grid>div>button.entity {
+    font-size: 2rem;
+}
+
+/* ✨ Animations & Effects */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes buttonPress {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.95);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes ripple {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+@keyframes separatorExpand {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 75%;
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.3);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    70% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes slideDownSubtle {
+    from {
+        transform: translateY(-10px);
+        opacity: 0.8;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRightSubtle {
+    from {
+        opacity: 0.7;
+        transform: translateX(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes cursorBlink {
+
+    0%,
+    50% {
+        opacity: 1;
+    }
+
+    51%,
+    100% {
+        opacity: 0;
+    }
+}
+
+body {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+#result {
+    animation: slideDownSubtle 0.3s ease-out;
+}
+
+#result>.command>span {
+    animation: slideInRightSubtle 0.4s ease-out 0.1s both;
+}
+
+#command-bar {
+    animation: fadeInUp 0.8s ease-out 0.3s both;
+}
+
+.seperator {
+    animation: separatorExpand 1s ease-out 0.5s both;
+}
+
+#button-grid {
+    animation: fadeInUp 1s ease-out 0.4s both;
+}
+
+#button-grid>div {
+    animation: bounceIn 0.6s ease-out calc(0.6s + var(--delay, 0s)) both;
+}
+
+#button-grid>div:nth-child(1) {
+    --delay: 0.1s;
+}
+
+#button-grid>div:nth-child(2) {
+    --delay: 0.15s;
+}
+
+#button-grid>div:nth-child(3) {
+    --delay: 0.2s;
+}
+
+#button-grid>div:nth-child(4) {
+    --delay: 0.25s;
+}
+
+#button-grid>div:nth-child(5) {
+    --delay: 0.3s;
+}
+
+#button-grid>div:nth-child(6) {
+    --delay: 0.35s;
+}
+
+#button-grid>div:nth-child(7) {
+    --delay: 0.4s;
+}
+
+#button-grid>div:nth-child(8) {
+    --delay: 0.45s;
+}
+
+#button-grid>div:nth-child(9) {
+    --delay: 0.5s;
+}
+
+#button-grid>div:nth-child(10) {
+    --delay: 0.55s;
+}
+
+#button-grid>div:nth-child(11) {
+    --delay: 0.6s;
+}
+
+#button-grid>div:nth-child(12) {
+    --delay: 0.65s;
+}
+
+#button-grid>div:nth-child(13) {
+    --delay: 0.7s;
+}
+
+#button-grid>div:nth-child(14) {
+    --delay: 0.75s;
+}
+
+#button-grid>div:nth-child(15) {
+    --delay: 0.8s;
+}
+
+#button-grid>div:nth-child(16) {
+    --delay: 0.85s;
+}
+
+#button-grid>div>button {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#button-grid>div>button:active {
+    animation: buttonPress 0.2s ease-out;
+}
+
+#button-grid>div>button:hover {
+    transform: scale(1.05);
+}
+
+#button-grid>div>button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+#button-grid>div>button:active::before {
+    width: 300px;
+    height: 300px;
+    animation: ripple 0.6s ease-out;
+}
+
+#result>.command::after {
+    content: '|';
+    animation: cursorBlink 1s ease-in-out infinite;
+    color: var(--clr-primary);
+    font-size: 2.75rem;
+    margin-left: 0.1rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
